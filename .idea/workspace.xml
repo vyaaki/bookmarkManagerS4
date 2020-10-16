@@ -20,22 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dc78282-c839-4cd7-9839-de0424095550" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/sonata_admin.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sonata_form.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/sonata_admin.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bookmarkManagerS4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bookmarkManagerS4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin/BookMarkAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/BookMark.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BookMarkRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +41,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9002" break_at_first_line="true" listening_started="true" local_pass_configuration_options="false" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Ubuntu">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
@@ -176,10 +169,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="FirefoxRemoteDebugType" nameIsGenerated="true">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -190,8 +190,23 @@
       <option name="presentableId" value="Default" />
       <updated>1602607694624</updated>
       <workItem from="1602607696130" duration="805000" />
-      <workItem from="1602843197639" duration="2363000" />
+      <workItem from="1602843197639" duration="15507000" />
     </task>
+    <task id="LOCAL-00001" summary="configure Sonata Admin Bundle">
+      <created>1602845768229</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602845768229</updated>
+    </task>
+    <task id="LOCAL-00002" summary="configure Sonata Admin Bundle">
+      <created>1602847194589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602847194589</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,14 +223,99 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="configure Sonata Admin Bundle" />
+    <option name="LAST_COMMIT_MESSAGE" value="configure Sonata Admin Bundle" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="220" y="358" key="#CLI_Interpreters" timestamp="1602850921457">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="220" y="358" key="#CLI_Interpreters/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602850921457" />
     <state x="391" y="527" key="#Notifications" timestamp="1602844869253">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="391" y="527" key="#Notifications/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602844869253" />
+    <state x="232" y="362" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602851631435">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="232" y="362" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602851631435" />
+    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602849911305">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602849911305" />
+    <state x="256" y="272" key="CommitChangelistDialog2" timestamp="1602847193238">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="256" y="272" key="CommitChangelistDialog2/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602847193238" />
+    <state width="1234" height="482" key="GridCell.Tab.0.bottom" timestamp="1602852553628">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553628" />
+    <state width="1234" height="482" key="GridCell.Tab.0.center" timestamp="1602852553628">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553628" />
+    <state width="1234" height="482" key="GridCell.Tab.0.left" timestamp="1602852553628">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553628" />
+    <state width="1234" height="482" key="GridCell.Tab.0.right" timestamp="1602852553628">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553628" />
+    <state width="1234" height="482" key="GridCell.Tab.1.bottom" timestamp="1602852553629">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553629" />
+    <state width="1234" height="482" key="GridCell.Tab.1.center" timestamp="1602852553628">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553628" />
+    <state width="1234" height="482" key="GridCell.Tab.1.left" timestamp="1602852553628">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553628" />
+    <state width="1234" height="482" key="GridCell.Tab.1.right" timestamp="1602852553629">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553629" />
+    <state width="1234" height="482" key="GridCell.Tab.2.bottom" timestamp="1602852553629">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.2.bottom/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553629" />
+    <state width="1234" height="482" key="GridCell.Tab.2.center" timestamp="1602852553629">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.2.center/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553629" />
+    <state width="1234" height="482" key="GridCell.Tab.2.left" timestamp="1602852553629">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.2.left/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553629" />
+    <state width="1234" height="482" key="GridCell.Tab.2.right" timestamp="1602852553629">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="482" key="GridCell.Tab.2.right/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602852553629" />
+    <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1602846570384">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="198" height="457" key="HiddenNamespacesPopup/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602846570384" />
+    <state x="141" y="348" key="SettingsEditor" timestamp="1602851661117">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="141" y="348" key="SettingsEditor/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602851661117" />
+    <state x="93" y="100" width="1094" height="1207" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602846965626">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="93" y="100" width="1094" height="1207" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602846965626" />
     <state x="570" y="319" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602607760329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="570" y="319" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602607760329" />
+    <state x="303" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1602846295826">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="303" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/-1920.160.1920.1040@0.0.2560.1400" timestamp="1602846295826" />
   </component>
 </project>

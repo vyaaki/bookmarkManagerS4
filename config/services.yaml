@@ -25,7 +25,14 @@ services:
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
         resource: '../src/Controller/'
-        tags: ['controller.service_arguments']
+        tags: [ 'controller.service_arguments' ]
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    admin.book_mark:
+        class: App\Admin\BookMarkAdmin
+        arguments: [ ~, App\Entity\BookMark, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: BookMark }
+        public: true
