@@ -134,18 +134,63 @@ final class BookMarkAdmin extends AbstractAdmin
     {
         $crawler = new Crawler($this->htmlContent);
         $object->setCreationDate(new DateTime());
-        if ($crawler->filter('head > title')->count() > 0) {
-            $object->setHeader($crawler->filter('head > title')->text());
+        $parsedUrl = parse_url($object->getUrl());
+        $baseURL = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
+
+        $object->setHeader($this->parseHeader($crawler));
+        $object->setFavicon($this->parseFavicon($crawler, $baseURL));
+        $object->setMetaDescription($this->parseDescription($crawler));
+        $object->setMetaKeywords($this->parseKeywords($crawler));
+    }
+
+    private function parseHeader(Crawler $crawler)
+    {
+        $crawlerFiltered = $crawler->filter('head > title');
+        return $crawlerFiltered->first()->text();
+    }
+
+    private function parseDescription(Crawler $crawler)
+    {
+        $patternArr = ['//meta[@name="description"]', '//meta[contains(@name, "Description")]', '//meta[contains(@name, "description")]', '//meta[contains(@property, "description")]', '//meta[contains(@property, "Description")]'];
+        return $this->getMetaContent($patternArr, $crawler);
+    }
+
+    private function parseKeywords(Crawler $crawler)
+    {
+        $patternArr = ['//meta[@name="keywords"]', '//meta[contains(@name, "Keywords")]', '//meta[contains(@name, "keywords")]', '//meta[contains(@property, "keywords")]', '//meta[contains(@property, "Keywords")]'];
+        return $this->getMetaContent($patternArr, $crawler);
+    }
+
+    private function parseFavicon(Crawler $crawlerParsed, string $baseURL): ?string
+    {
+        $patternArr = ['//link[contains(@rel, "icon")]', '//link[contains(@href, "favicon")]'];
+        foreach ($patternArr as $pattern) {
+            if ($crawlerParsed->filterXPath($pattern)->count() > 0) {
+                $favicon = $crawlerParsed->filterXPath($pattern)->first()->attr('href');
+                if (preg_match('@^(http|https)@', $favicon)) {
+                    $result = $favicon;
+                } else {
+                    $result = $baseURL . $favicon;
+                }
+                return $result;
+            }
         }
-        if ($crawler->filterXPath('//link[contains(@rel, "icon")]')->count() > 0) {
-            $favicon = $crawler->filterXPath('//link[contains(@rel, "icon")]')->first()->attr('href');
-            $object->setFavicon(parse_url($object->getUrl())['host'] . $favicon);
+        return null;
+    }
+
+    /**
+     * @param array $patternArr
+     * @param Crawler $crawler
+     * @return string|null
+     */
+    private function getMetaContent(array $patternArr, Crawler $crawler): ?string
+    {
+        foreach ($patternArr as $pattern) {
+            $crawlerFiltered = $crawler->filterXPath($pattern);
+            if ($crawlerFiltered->count() > 0) {
+                return $crawlerFiltered->first()->attr('content');
+            }
         }
-        if ($crawler->filterXPath('//meta[contains(@name, "description")]')->count() > 0) {
-            $object->setMetaDescription($crawler->filterXPath('//meta[contains(@name, "description")]')->first()->attr('content'));
-        }
-        if ($crawler->filterXPath('//meta[contains(@name, "Keywords")]')->count() > 0) {
-            $object->setMetaKeywords($crawler->filterXPath('//meta[contains(@name, "Keywords")]')->first()->attr('content'));
-        }
+        return null;
     }
 }
