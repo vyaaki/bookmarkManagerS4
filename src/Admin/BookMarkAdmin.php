@@ -67,7 +67,7 @@ final class BookMarkAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('creationDate')
-            ->add('favicon')
+            ->add('favicon', 'favicon')
             ->add('url')
             ->add('header')
             ->add('metaDescription')
@@ -75,7 +75,6 @@ final class BookMarkAdmin extends AbstractAdmin
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
-                    'edit' => [],
                     'delete' => [],
                 ],
             ]);
@@ -91,7 +90,7 @@ final class BookMarkAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('creationDate')
-            ->add('favicon')
+            ->add('favicon', 'favicon')
             ->add('url')
             ->add('header')
             ->add('metaDescription')

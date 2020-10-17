@@ -32,7 +32,7 @@ services:
 
     admin.book_mark:
         class: App\Admin\BookMarkAdmin
-        arguments: [ ~, App\Entity\BookMark, ~ ]
+        arguments: [ ~, App\Entity\BookMark, App\Controller\BookMarkAdminController ]
         tags:
             - { name: sonata.admin, manager_type: orm, group: admin, label: BookMark }
         public: true

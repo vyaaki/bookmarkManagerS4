@@ -10,3 +10,11 @@ sonata_block:
     blocks:
         sonata.admin.block.admin_list:
             contexts: [ admin ]
+
+sonata_doctrine_orm_admin:
+    templates:
+        types:
+            list:
+                favicon: 'fieldtypes/faviconList.html.twig'
+            show:
+                favicon: 'fieldtypes/faviconShow.html.twig'
